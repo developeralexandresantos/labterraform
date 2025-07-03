@@ -41,7 +41,8 @@ Este projeto usa um DevContainer com:
 ├── outputs.tf           # (opcional) Outputs organizados
 ├── Makefile             # Comandos automatizados
 ├── .envrc               # (opcional) Carregamento de env
-└── README.md
+├── README.md
+└── upload_file.py       # upload files from local directory to localStack S3
 ```
 
 ---

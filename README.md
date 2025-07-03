@@ -81,6 +81,7 @@ Antes de qualquer execução de Terraform, o script:
 - A key pública `~/.ssh/id_rsa.pub` **deve existir** no host para o Terraform importar.
 - O `main.tf` foi modularizado em arquivos menores (`networking.tf`, `security.tf`) para organização.
 - O ambiente **não persiste dados entre reinícios**, a menos que você configure volumes persistentes.
+- Adicionamos essa linha para fazer um teste de commit integrado.
 
 ---
 

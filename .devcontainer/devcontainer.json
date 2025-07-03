@@ -1,0 +1,26 @@
+{
+	"name": "Terraform Dev Container",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"hashicorp.terraform",
+				"amazonwebservices.aws-toolkit-vscode",
+				"ms-azuretools.vscode-docker",
+				"redhat.vscode-yaml",
+				"bierner.markdown-mermaid"
+			]
+		}
+	},
+	"runArgs": [
+		"--env-file",
+		".devcontainer/devcontainer.env"
+	],
+	"forwardPorts": [4566, 8080],
+	"postCreateCommand": "echo '🌍 Ambiente DevContainer com Terraform e AWS pronto!'"
+}

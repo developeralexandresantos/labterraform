@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  localstack:
+    image: localstack/localstack:latest
+    container_name: localstack
+    environment:
+      - SERVICES=s3,ec2,iam,sts
+      - DEBUG=1
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - LOCALSTACK_HOST=localhost
+      - LOCALSTACK_WEB_UI=1
+    ports:
+      - "4566:4566"  # LocalStack Gateway
+      - "4510-4559:4510-4559"  # LocalStack services
+      - "8080:8080"  # LocalStack Web UI
+    volumes:
+      - ./volume/localstack:/var/lib/localstack
+      - /var/run/docker.sock:/var/run/docker.sock
